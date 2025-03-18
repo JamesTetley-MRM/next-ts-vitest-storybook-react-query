@@ -1,0 +1,34 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title='Layouts/Home' />
+
+# Components / Atoms / Foundations Used
+
+## Atoms:
+
+- **Card**
+  A versatile component that displays an image, title, body text, and an optional link.
+
+## Foundations:
+
+- **GridItem, Row, Column**
+  Provide layout and spacing utilities to arrange content in a responsive grid.
+
+## Hooks:
+
+- **useAnimate**
+  Adds animation classes to components.
+- **useHomeContent**
+  Retrieves and provides the home page content.
+
+## Usage
+
+```tsx
+import dynamic from 'next/dynamic'
+
+const Home = dynamic(() => import('@layouts/Home/Home.component'))
+
+export default function HomePage() {
+  return <Home />
+}
+```

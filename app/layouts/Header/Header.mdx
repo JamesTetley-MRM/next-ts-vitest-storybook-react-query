@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title='Layouts/Header' />
+
+# Components / Atoms / Foundations Used
+
+## Atoms:
+
+- **Logo**
+  Provides a clickable logo component, typically used for branding and navigation.
+
+## Foundations:
+
+- **GridItem, Row, Column**
+  Offer layout and spacing utilities to build structured and responsive page sections.
+
+## Usage
+
+```tsx
+import dynamic from 'next/dynamic'
+import type { GlobalChildren } from '@global/global.types'
+
+const Header = dynamic(() => import('@layouts/Header/Header.component'))
+
+export default function RootLayout({ children }: GlobalChildren) {
+  return (
+    <html lang='en'>
+      <body>
+        <Header />
+        {children && children}
+      </body>
+    </html>
+  )
+}
+```

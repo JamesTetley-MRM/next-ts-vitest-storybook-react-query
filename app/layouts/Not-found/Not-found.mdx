@@ -1,0 +1,34 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title='Layouts/Not-found' />
+
+# Components / Atoms / Foundations Used
+
+## Atoms:
+
+- **Button, Loading**
+  Provide actionable elements and display a loading indicator while content is being fetched.
+
+## Foundations:
+
+- **GridItem, Row, Column, Typography**
+  Offer layout, spacing, and text styling utilities to construct structured and responsive page sections.
+
+## Hooks:
+
+- **useAnimate**
+  Applies animation classes for smooth transitions.
+- **useNotFoundContent**
+  Retrieves content specific to the NotFound layout, including titles, subtitles, and error details.
+
+## Usage
+
+```tsx
+import dynamic from 'next/dynamic'
+
+const NotFound = dynamic(() => import('@layouts/Not-found/Not-found.component'))
+
+export default function NotFoundPage() {
+  return <NotFound />
+}
+```

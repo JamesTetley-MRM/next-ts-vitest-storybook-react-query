@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title='Layouts/Footer' />
+
+# Components / Atoms / Foundations Used
+
+## Atoms:
+
+- Button, Icon, Image, Link, Loading
+- Provide the smallest, reusable UI elements.
+
+## Foundations:
+
+- Grid, Row, Column, Spacer, Typography
+- Offer layout and spacing utilities to build complex page structures.
+
+## Usage
+
+```tsx
+import dynamic from 'next/dynamic'
+import type { GlobalChildren } from '@global/global.types'
+
+const Footer = dynamic(() => import('@layouts/Footer/Footer.component'))
+
+export default function RootLayout({ children }: GlobalChildren) {
+  return (
+    <html lang='en'>
+      <body>
+        {children && children}
+        <Footer />
+      </body>
+    </html>
+  )
+}
+```
