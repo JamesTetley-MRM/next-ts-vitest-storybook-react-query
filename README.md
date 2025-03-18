@@ -40,7 +40,7 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 
 ## Setup
 
-1. `git clone git@github.com:tetloose/tetloose-next-storybook-vitest-react-query.git`
+1. `git clone git@github.com:JamesTetley-MRM/next-ts-vitest-storybook-react-query.git`
 2. `cmd shift p recommended` install recommended plugins
 3. `yarn setup`
 
